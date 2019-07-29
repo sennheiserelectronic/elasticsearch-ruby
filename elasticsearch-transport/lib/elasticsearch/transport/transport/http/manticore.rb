@@ -63,7 +63,7 @@ module Elasticsearch
           # @return [Response]
           # @see    Transport::Base#perform_request
           #
-          def perform_request(method, path, params={}, body=nil)
+          def perform_request(method, path, params={}, body=nil, opts={})
             super do |connection, url|
               params[:body] = __convert_to_json(body) if body
               params = params.merge @request_options

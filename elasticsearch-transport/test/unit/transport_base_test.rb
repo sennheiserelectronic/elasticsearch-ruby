@@ -14,7 +14,7 @@ class Elasticsearch::Transport::Transport::BaseTest < Test::Unit::TestCase
   end
 
   class DummyTransportPerformer < DummyTransport
-    def perform_request(method, path, params={}, body=nil, &block); super; end
+    def perform_request(method, path, params={}, body=nil, opts={}, &block); super; end
   end
 
   class DummySerializer
