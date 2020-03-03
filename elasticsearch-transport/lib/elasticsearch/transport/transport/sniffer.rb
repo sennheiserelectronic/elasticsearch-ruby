@@ -28,7 +28,7 @@ module Elasticsearch
         #
         def hosts
           Timeout::timeout(timeout, SnifferTimeoutError) do
-            nodes = transport.perform_request('GET', '_nodes/http', {}, nil, nil,
+            nodes = transport.perform_request('GET', '_nodes/http', {}, nil,
                                               reload_on_failure: false).body
 
             hosts = nodes['nodes'].map do |id,info|

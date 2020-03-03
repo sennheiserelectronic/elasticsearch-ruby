@@ -121,7 +121,7 @@ describe Elasticsearch::Transport::Transport::Base do
 
       it 'uses the option `retry_on_failure` value' do
         expect {
-          client.transport.perform_request('GET', '/info', {}, nil, nil, retry_on_failure: 5)
+          client.transport.perform_request('GET', '/info', {}, nil, retry_on_failure: 5)
         }.to raise_exception(Faraday::ConnectionFailed)
       end
     end
@@ -161,7 +161,7 @@ describe Elasticsearch::Transport::Transport::Base do
 
       it 'uses the option `retry_on_failure` value' do
         expect {
-          client.transport.perform_request('GET', '/info', {}, nil, nil, retry_on_failure: 5)
+          client.transport.perform_request('GET', '/info', {}, nil, retry_on_failure: 5)
         }.to raise_exception(Faraday::ConnectionFailed)
       end
     end
@@ -201,7 +201,7 @@ describe Elasticsearch::Transport::Transport::Base do
 
       it 'uses the option `retry_on_failure` value' do
         expect {
-          client.transport.perform_request('GET', '/info', {}, nil, nil, retry_on_failure: 5)
+          client.transport.perform_request('GET', '/info', {}, nil, retry_on_failure: 5)
         }.to raise_exception(Faraday::ConnectionFailed)
       end
     end
@@ -240,7 +240,7 @@ describe Elasticsearch::Transport::Transport::Base do
 
       it 'uses the option `retry_on_failure` value' do
         expect {
-          client.transport.perform_request('GET', '/info', {}, nil, nil, retry_on_failure: 5)
+          client.transport.perform_request('GET', '/info', {}, nil, retry_on_failure: 5)
         }.to raise_exception(Faraday::ConnectionFailed)
       end
     end
